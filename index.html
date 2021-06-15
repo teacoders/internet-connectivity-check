@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Coders Internet Connectivity Check</title>
+</head>
+<body>
+    <h1 id="internet_status">You are online</h1>
+    <script>
+        window.addEventListener('online',updateInternetStatus)
+        window.addEventListener('offline',updateInternetStatus)
+        function updateInternetStatus() {
+            if(navigator.onLine){
+                internet_status.innerText = 'You are online'
+            }else{
+                internet_status.innerText = 'You are offline'
+            }
+        }
+    </script>
+</body>
+</html>
